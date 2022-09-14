@@ -11,6 +11,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -339,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\lib\App;.\lib\HW;.\lib\Square-GUI;.\lib\CMSIS;.\lib\SPL</IncludePath>
+              <IncludePath>.\lib\App;.\lib\HW;.\lib\Square-GUI;.\lib\CMSIS;.\lib\SPL;.\lib\LCD_RA8876_FT5316;.\lib\assets</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -457,9 +458,48 @@
         </Group>
         <Group>
           <GroupName>LCD</GroupName>
-        </Group>
-        <Group>
-          <GroupName>Square-GUI</GroupName>
+          <Files>
+            <File>
+              <FileName>FT5316.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\FT5316.c</FilePath>
+            </File>
+            <File>
+              <FileName>FT5316.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\FT5316.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\LCD_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\LCD_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\LCD_demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_demo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\LCD_demo.h</FilePath>
+            </File>
+            <File>
+              <FileName>RA8876.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\RA8876.c</FilePath>
+            </File>
+            <File>
+              <FileName>RA8876.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\RA8876.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
@@ -573,6 +613,111 @@
               <FileName>stm32f4xx_tim.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\lib\SPL\stm32f4xx_tim.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>assets</GroupName>
+          <Files>
+            <File>
+              <FileName>image_deb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\assets\image_deb.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Square-GUI</GroupName>
+          <Files>
+            <File>
+              <FileName>SGUI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_button.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_button.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_button.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_canvas.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_canvas.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_canvas.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_canvas.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_config.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_dataTransfer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_dataTransfer.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_dataTransfer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_dataTransfer.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_label.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_label.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_label.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_label.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_page.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_page.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_page.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_page.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_system.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_system.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_primitives.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_primitives.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_primitives.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_primitives.h</FilePath>
             </File>
           </Files>
         </Group>
