@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\lib\App;.\lib\HW;.\lib\Square-GUI;.\lib\CMSIS;.\lib\SPL;.\lib\LCD_RA8876_FT5316;.\lib\assets</IncludePath>
+              <IncludePath>.\lib\App;.\lib\HW;.\lib\Square-GUI;.\lib\CMSIS;.\lib\SPL;.\lib\LCD_RA8876_FT5316;.\lib\assets;.\lib\myGUI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -650,19 +650,9 @@
               <FilePath>.\lib\Square-GUI\SGUI_canvas.h</FilePath>
             </File>
             <File>
-              <FileName>SGUI_config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lib\Square-GUI\SGUI_config.c</FilePath>
-            </File>
-            <File>
               <FileName>SGUI_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\lib\Square-GUI\SGUI_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>SGUI_dataTransfer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lib\Square-GUI\SGUI_dataTransfer.c</FilePath>
             </File>
             <File>
               <FileName>SGUI_dataTransfer.h</FileName>
@@ -708,6 +698,26 @@
               <FileName>SGUI_primitives.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\lib\Square-GUI\SGUI_primitives.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>myGUI</GroupName>
+          <Files>
+            <File>
+              <FileName>myGUI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\myGUI\myGUI.c</FilePath>
+            </File>
+            <File>
+              <FileName>myGUI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\myGUI\myGUI.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_dataTransfer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\myGUI\SGUI_dataTransfer.c</FilePath>
             </File>
           </Files>
         </Group>
