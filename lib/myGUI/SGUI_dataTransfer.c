@@ -15,14 +15,43 @@ void SGUI_showLcdPage(unsigned long page)
 }
 
 
-void SGUI_drawSquare(unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1, unsigned short color)
+void SGUI_LCD_drawSquare(unsigned short x0, unsigned short y0,
+                         unsigned short x1, unsigned short y1,
+                         unsigned short rx, unsigned short ry,
+                         unsigned short color)
 {
-  LCD_drawSquare(x0, y0, x1, y1, color);
+  if((rx > 0) || (ry > 0))
+  {
+    LCD_drawCircleSquare(x0, y0, x1, y1, rx, ry, color);
+  }
+  else
+  {
+    LCD_drawSquare(x0, y0, x1, y1, color);
+  }
 }
 
-void SGUI_drawFilledSquare(unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1, unsigned short color)
+void SGUI_LCD_drawFilledSquare(unsigned short x0, unsigned short y0,
+                               unsigned short x1, unsigned short y1,
+                               unsigned short rx, unsigned short ry,
+                               unsigned short color)
 {
-  LCD_drawFilledSquare(x0, y0, x1, y1, color);
+  if((rx > 0) || (ry > 0))
+  {
+    LCD_drawFilledCircleSquare(x0, y0, x1, y1, rx, ry, color);
+  }
+  else
+  {
+    LCD_drawFilledSquare(x0, y0, x1, y1, color);
+  }
+}
+
+void SGUI_LCD_drawPicture(const unsigned char* picture,
+                          unsigned long page,
+                          unsigned short x, unsigned short y,
+                          unsigned short w, unsigned short h)
+{
+  LCD_drawBitmapPageBuf(picture, MODE_8BPP, PAGE9_START_ADDR, page, MODE_16BPP,
+                        x, y, w, h);
 }
 
 

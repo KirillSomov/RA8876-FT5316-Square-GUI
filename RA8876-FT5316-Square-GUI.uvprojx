@@ -610,9 +610,9 @@
           <GroupName>assets</GroupName>
           <Files>
             <File>
-              <FileName>image_deb.c</FileName>
+              <FileName>image_deb_8bpp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\lib\assets\image_deb.c</FilePath>
+              <FilePath>.\lib\assets\image_deb_8bpp.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -698,6 +698,16 @@
               <FileName>SGUI_primitives.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\lib\Square-GUI\SGUI_primitives.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_picture.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_picture.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_picture.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_picture.h</FilePath>
             </File>
           </Files>
         </Group>
