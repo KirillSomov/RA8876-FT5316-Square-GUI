@@ -33,9 +33,12 @@ static void page_0_init(void)
   SGUI_clearPage(0xBCDB);
   SGUI_createLabel(0, 100, 100, 150, 150, 0, 0, 10, Red, Blue, 0, 0, 0, 0, 0);
   SGUI_createButton(0, 400, 200, 500, 300, 0, 0, 2, Yellow, Magenta, 0, 0, 0, 0, 0, 1000, btnAct1);
-  SGUI_createButton(0, 600, 200, 700, 300, 5, 5, 2, Magenta, Yellow, 0, 0, 0, 0, 0, 5000, btnAct2);
+  SGUI_createButton(0, 600, 200, 700, 300, 10, 10, 5, Magenta, Yellow, 0, 0, 0, 0, 0, 5000, btnAct2);
   SGUI_createButton(0, 850, 50, 900, 100, 0, 0, 2, Red, Grey, 0, 0, 0, 0, 0, 1000, btnGoToPage1);
-  SGUI_createPicture(0, &image_deb_8bpp, 10, 10, 400, 422, 0, 0, 0, 0);
+  SGUI_createPicture(0, &image_deb_8bpp, 50, 50, 400, 422, 8, 8, 4, 0x4BC6);
+  SGUI_drawFrame(800, 400, 900, 500,
+                 5, 5,
+                 5, 0);
   SGUI_drawPage(0);
 }
 
