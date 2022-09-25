@@ -55,6 +55,31 @@ void SGUI_LCD_drawPicture(const unsigned char* picture,
 }
 
 
+void SGUI_LCD_printString(char* string,
+                          unsigned short x, unsigned short y,
+                          unsigned short size,
+                          unsigned short backgroundColor, unsigned short textColor)
+{
+  switch(size)
+  {
+    case FONT_SIZE_24:
+      LCD_printString(string, x, y,
+                      FONT_SIZE_12X24, FONT_WIDTH_X1, FONT_HEIGHT_X1,
+                      backgroundColor, textColor);
+      break;
+
+    case FONT_SIZE_48:
+      LCD_printString(string, x, y,
+                      FONT_SIZE_12X24, FONT_WIDTH_X2, FONT_HEIGHT_X2,
+                      backgroundColor, textColor);
+      break;
+
+    default:
+      break;
+  }
+}
+
+
 bool SGUI_sampleTouch(unsigned short* x, unsigned short* y)
 {
   return Touch_sampleTouch(x, y);

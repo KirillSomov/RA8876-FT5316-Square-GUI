@@ -709,6 +709,16 @@
               <FileType>5</FileType>
               <FilePath>.\lib\Square-GUI\SGUI_picture.h</FilePath>
             </File>
+            <File>
+              <FileName>SGUI_string.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_string.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_string.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_string.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
