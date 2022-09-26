@@ -45,6 +45,13 @@ void SGUI_LCD_drawFilledSquare(unsigned short x0, unsigned short y0,
   }
 }
 
+
+void SGUI_LCD_drawFilledCircle(unsigned short x, unsigned short y, unsigned short r, unsigned short color)
+{
+  LCD_drawFilledCircle(x, y, r, color);
+}
+
+
 void SGUI_LCD_drawPicture(const unsigned char* picture,
                           unsigned long page,
                           unsigned short x, unsigned short y,
