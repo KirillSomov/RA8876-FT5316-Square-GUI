@@ -45,7 +45,7 @@ static void page_0_init(void)
                  5, 5,
                  5, 0);
   //LCD_printString("HELLO\nWORLD", 800, 200, FONT_SIZE_16X32, 1, 1, Magenta, Black);
-  SGUI_printString("one\ntwo\nthree\nfour", 800, 150, FONT_SIZE_48, Magenta, Black);
+  SGUI_printString("one\ntw\nthree\nfour", 800, 150, FONT_SIZE_48, Magenta, Black);
   SGUI_printString("five", 800, 500, FONT_SIZE_48, Magenta, Black);
   SGUI_drawLine(500, 10, 500, 500, 10, Black);
   SGUI_drawLine(500, 10, 900, 500, 10, Black);
