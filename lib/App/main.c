@@ -13,7 +13,7 @@ int main(void)
 {
   CPU_init();
   GPIO_setup();
-  TIM6_DAC_init();
+  TIM10_init();
   SPIxInit(SPI3, 0, 0); //~13 MHz
    
   I2C1_init();
@@ -29,8 +29,8 @@ int main(void)
   while(1)
   {
     Touch_handler();
-    SGUI_sync(10);
+    SGUI_sync(1);
     SGUI_handler();
-    delay_ms(10);
+    delay_ms(1);
   }
 }

@@ -25,6 +25,8 @@ static void btnGoToPage0(void);
 static void btnGoToPage1(void);
 static void btnGoToPage2(void);
 static void btnCanvasClear(void);
+static void сanvasActStar(void);
+static void сanvasActLine(void);
 
 
 extern const unsigned char image_deb_8bpp;
@@ -45,6 +47,9 @@ static void page_0_init(void)
   //LCD_printString("HELLO\nWORLD", 800, 200, FONT_SIZE_16X32, 1, 1, Magenta, Black);
   SGUI_printString("one\ntwo\nthree\nfour", 800, 150, FONT_SIZE_48, Magenta, Black);
   SGUI_printString("five", 800, 500, FONT_SIZE_48, Magenta, Black);
+  SGUI_drawLine(500, 10, 500, 500, 10, Black);
+  SGUI_drawLine(500, 10, 900, 500, 10, Black);
+  SGUI_drawLine(900, 10, 500, 500, 10, Black);
   SGUI_drawPage(0);
 }
 
@@ -69,7 +74,8 @@ static void page_2_init(void)
   SGUI_clearPage(0xBCDB);
   SGUI_createButton(2, 850, 50, 900, 100, 0, 0, 2, Red, Grey, 0, 0, 0, 0, 0, 100, btnGoToPage0);
   SGUI_createButton(2, 850, 200, 900, 250, 0, 0, 2, Red, Grey, 0, 0, 0, 0, 0, 100, btnCanvasClear);
-  SGUI_createCanvas(2, 10, 10, 410, 410, 5, 5, 5, White, Green, 10, Red, 0);
+  SGUI_createCanvas(2, 10, 10, 410, 410, 5, 5, 5, White, Green, 10, Red, сanvasActLine);
+  SGUI_canvasSetPenWeight(2, 0, 5);
   SGUI_drawPage(2);
 }
 
@@ -104,6 +110,29 @@ static void btnGoToPage2(void)
 static void btnCanvasClear(void)
 {
   SGUI_canvasClear(2, 0);
+}
+
+
+static void сanvasActStar(void)
+{
+  unsigned short x, y;
+  SGUI_getSampleTouch(&x, &y);
+  SGUI_printString("*", x, y, FONT_SIZE_48, -1, Black);
+  SGUI_canvasIdle(2, 0, 200);
+}
+
+static void сanvasActLine(void)
+{
+  static bool init = false;
+  static unsigned short x0 = 0xFFFF, y0 = 0xFFFF;
+  unsigned short x1, y1;
+  SGUI_getSampleTouch(&x1, &y1);
+  if(((x1-x0) < 10) && ((y1-y0) < 10))
+  {
+    SGUI_drawLine(x0, y0, x1, y1, 5, Red);
+  }
+  x0 = x1;
+  y0 = y1;
 }
 
 
