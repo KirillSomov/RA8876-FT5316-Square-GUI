@@ -83,6 +83,12 @@ void SGUI_LCD_printString(char* string,
                       backgroundColor, textColor);
       break;
 
+    case FONT_SIZE_32:
+      LCD_printString(string, x, y,
+                      FONT_SIZE_16X32, FONT_WIDTH_X1, FONT_HEIGHT_X1,
+                      backgroundColor, textColor);
+      break;
+
     case FONT_SIZE_48:
       LCD_printString(string, x, y,
                       FONT_SIZE_12X24, FONT_WIDTH_X2, FONT_HEIGHT_X2,
