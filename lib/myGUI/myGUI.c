@@ -76,7 +76,7 @@ static void page_2_init(void)
   SGUI_clearPage(0xBCDB);
   SGUI_createLabel(2, 800, 400, 900, 450, 0, 0, 1, Red, Blue, "HELLO", FONT_SIZE_24, Black, 5, 5, 0);
   SGUI_createButton(2, 850, 50, 900, 100, 0, 0, 2, Red, Grey, 0, 0, 0, 0, 0, true, 100, btnGoToPage0);
-  SGUI_createButton(2, 850, 200, 950, 250, 0, 0, 2, Red, Grey, "clean", FONT_SIZE_24, Black, 4, 4, true, 100, btnCanvasClear);
+  SGUI_createButton(2, 700, 200, 950, 350, 0, 0, 2, Red, Grey, "clean", FONT_SIZE_24, Black, 4, 4, true, 100, btnCanvasClear);
   SGUI_createCanvas(2, 10, 10, 410, 410, 5, 5, 5, White, Green, 10, Red, сanvasActLine);
   SGUI_canvasSetPenWeight(2, 0, 5);
   SGUI_drawPage(2);
@@ -116,7 +116,7 @@ static void btnCanvasClear(void)
 {
   SGUI_canvasClear(2, 0);
   SGUI_labelSetText(2, 0, SGUI_intToStr(10), FONT_SIZE_24, Black);
-  SGUI_buttonSetText(2, 1, "clear", FONT_SIZE_24, Green);
+  SGUI_buttonSetText(2, 1, "  clear\n--clear--", FONT_SIZE_24, Green);
 }
 
 
